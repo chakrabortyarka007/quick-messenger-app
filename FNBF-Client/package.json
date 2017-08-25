@@ -1,7 +1,7 @@
 {
-  "name": "momentz4ever-web-ng4",
+  "name": "FNBF App",
   "version": "1.0.0",
-  "description": "momentz4ever, an ng4 app from scratch(not initialized with some seeder repo or util like ng-cli)",
+  "description": "FNBF App",
   "main": "main.js",
   "scripts": {
     "build": "webpack-dev-server --config webpack/webpack.config.js"
