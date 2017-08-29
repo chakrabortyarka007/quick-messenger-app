@@ -1,10 +1,11 @@
 {
-  "name": "FNBF App",
+  "name": "fnbf_app",
   "version": "1.0.0",
   "description": "FNBF App",
   "main": "main.js",
   "scripts": {
-    "build": "webpack-dev-server --config webpack/webpack.config.js"
+    "test" : "karma start",
+    "build": "webpack-dev-server --config webpack/webpack.config.js"    
   },
   "keywords": [
     "angular",
