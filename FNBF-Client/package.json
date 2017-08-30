@@ -4,8 +4,8 @@
   "description": "FNBF App",
   "main": "main.js",
   "scripts": {
-    "test" : "karma start",
-    "build": "webpack-dev-server --config webpack/webpack.config.js"    
+    "test": "karma start",
+    "build": "webpack-dev-server --config webpack/webpack.config.js"
   },
   "keywords": [
     "angular",
@@ -50,6 +50,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.7",
+    "karma-typescript": "^3.0.5",
     "karma-webpack": "^2.0.3",
     "node-sass": "^4.5.3",
     "npm": "^5.0.2",

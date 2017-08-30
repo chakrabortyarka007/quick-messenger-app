@@ -1,6 +1,8 @@
 // Karma configuration
 // Generated on Fri Aug 25 2017 09:19:14 GMT+0530 (India Standard Time)
 
+var testWebpackConfig = require('./webpack/webpack-test.config.js');
+
 module.exports = function(config) {
   config.set({
 
@@ -15,9 +17,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: './src/unit-tests.ts', watched: false },
-      { pattern: '*spec.ts', watched: false },
-      { pattern: 'src/components/*spec.ts', watched: false }
+      { pattern: './src/unit-tests.ts', watched: false }
     ],
 
 
@@ -36,7 +36,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'karma-typescript'],
 
 
     // web server port
@@ -67,6 +67,13 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+      
+    // Set Webpack configuration, but set the entry to spec files
+    webpack: {
+      module: testWebpackConfig.module,
+      resolve: testWebpackConfig.resolve,
+      plugins: testWebpackConfig.plugins
+    }
   })
 }
