@@ -1,3 +1,3 @@
 # FNBF App Client container
 
-## sample Angular 2 applications https://ciphertrick.com/category/angular-2/
+## sample Angular 2 services/providers applications https://angular.io/tutorial/toh-pt4
