@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../../components/login/login.component';
+import { LoginUserDetails } from '../../services/login.component.services'
 
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([
@@ -25,7 +26,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([
     HttpModule,
     rootRouting
   ],
-  providers: [],
+  providers: [LoginUserDetails],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

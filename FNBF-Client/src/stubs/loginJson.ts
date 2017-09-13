@@ -1,5 +1,6 @@
-{
-    "userDetails" : [
+import {logindata} from '../interfaces/loginData'
+
+export const userDetailsData: logindata[] = [
         {
            "userName" : "Arka",
             "password" : 12345,
@@ -11,4 +12,3 @@
             "userType" : "admin"
         }
     ]
-}
