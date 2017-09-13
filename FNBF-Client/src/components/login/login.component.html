@@ -2,7 +2,7 @@
 
 <form name="loginForm">
 <input type="test" value="username"/>
-<div>{{userDetailsData}}</div>
+<div *ngFor="let userDetail of userDetails">{{userDetail.userName}}</div>
 <input type="password" value="password"/>
 <button type="submit" value="submit">Submit</button>
 </form>

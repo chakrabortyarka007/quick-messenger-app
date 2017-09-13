@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { NgFor } from '@angular/common';
 import {LoginUserDetails} from '../../services/login.component.services'
 
 @Component({
@@ -6,13 +7,15 @@ import {LoginUserDetails} from '../../services/login.component.services'
     templateUrl:  './login.component.html'
 })
 export class LoginComponent {
+    
+   userDetails = {};
    constructor(private user: LoginUserDetails){}
     
    ngOnInit(){
        this.getEmployee();
    }
-    getEmployee() :any{
-        this.user = this.user.getUser();
-        console.log(this.user);
+    getEmployee() :void{
+       this.userDetails = this.user.getUser();
+        console.log(this.userDetails);
     }
 }
