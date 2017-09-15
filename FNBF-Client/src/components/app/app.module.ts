@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ModuleWithProviders,NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router'
+import { HttpModule,Http,Response } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { NgFor } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../../components/login/login.component';

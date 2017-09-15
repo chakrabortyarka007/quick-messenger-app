@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import { NgFor } from '@angular/common';
 import {LoginUserDetails} from '../../services/login.component.services'
 
 @Component({
