@@ -12,7 +12,7 @@ module.exports = {
     },
     watch:true,
     resolve: {
-        extensions: ['.js', '.ts', '.html']
+        extensions: [' ','.js', '.ts','.json','.css', '.html']
     },
     devServer: {
         contentBase: path.join(__dirname, "../dist/"),
@@ -22,7 +22,8 @@ module.exports = {
     module: {
         loaders: [
             { test: /.ts$/, use: ['awesome-typescript-loader', 'angular2-template-loader'] },
-            { test: /.html$/, use: 'raw-loader' }
+            { test: /.html$/, use: 'raw-loader' },
+            { test: /\.json$/, use: ["json-loader"]}
         ]
     },
     plugins: [

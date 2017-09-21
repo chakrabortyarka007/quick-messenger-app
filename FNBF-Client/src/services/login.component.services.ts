@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import {logindata} from '../interfaces/loginData';
 import { userDetailsData } from '../stubs/loginJson'
@@ -9,10 +10,10 @@ import { userDetailsData } from '../stubs/loginJson'
 export class LoginUserDetails{
     
     constructor(private http: Http){}
-    getUser(): any{
-       this.http.get('/stubs/login.json').subscribe(data =>
-           this.user = data
-       )
-       console.log(this.user);
+    getUser() :Observable<logindata[]>{
+//       return this.http.get('https://api.myjson.com/bins/17kx7x')
+//                        .map(res => res.json());
+        return this.http.get('/src/stubs/login.json')
+                        .map(res => res.json());
     }
 }

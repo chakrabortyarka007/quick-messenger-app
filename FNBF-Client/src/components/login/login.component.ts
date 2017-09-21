@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {LoginUserDetails} from '../../services/login.component.services'
+import {LoginUserDetails} from '../../services/login.component.services';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
     selector: 'login-app',
@@ -7,14 +8,18 @@ import {LoginUserDetails} from '../../services/login.component.services'
 })
 export class LoginComponent {
     
-   userDetails = {};
+   userDetails = [];
+   data = {};
    constructor(private user: LoginUserDetails){}
     
    ngOnInit(){
        this.getEmployee();
    }
-    getEmployee() :void{
-       this.userDetails = this.user.getUser();
-        console.log(this.userDetails);
+    getEmployee() :any{
+      return this.user.getUser().subscribe((value) => {
+           this.userDetails = value
+       },(error) => {
+          console.log("Error happened");
+      });
     }
 }
