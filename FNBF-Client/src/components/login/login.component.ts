@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Rx';
 
 @Component({
     selector: 'login-app',
+    styleUrls: ['./login.component.css'],
     templateUrl:  './login.component.html'
 })
 export class LoginComponent {
